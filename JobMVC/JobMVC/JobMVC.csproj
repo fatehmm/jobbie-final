@@ -1,0 +1,73 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\images\1.PNG2b2c451f-db4d-4154-884d-35058a2b2ede" />
+    <Content Remove="wwwroot\images\1.PNG87fdd699-b73c-45e6-99b2-011e919b258e" />
+    <Content Remove="wwwroot\images\1.PNG8ab230ad-f497-42b8-bcf7-dd013a9056e6" />
+    <Content Remove="wwwroot\images\1.PNG8d591a54-9048-472c-8932-ac3e8ada9214" />
+    <Content Remove="wwwroot\images\1.PNGb9003321-cb0c-463c-8a68-46c703b01b60" />
+    <Content Remove="wwwroot\images\1.PNGe4f7d1fd-f335-486d-bcb5-8c825ffbd3e8" />
+    <Content Remove="wwwroot\images\2.PNG7cd0c4a9-8d92-4ff6-a065-167fbf142f2c" />
+  </ItemGroup>
+
+  <ItemGroup>
+
+    <Folder Include="Data\" />
+
+    <Folder Include="wwwroot\css\" />
+    <Folder Include="Models\Identity\" />
+    <Folder Include="wwwroot\lib\bootstrap\" />
+    <Folder Include="wwwroot\lib\bootstrap\dist\js\" />
+    <Folder Include="wwwroot\lib\jquery-validation-unobtrusive\" />
+    <Folder Include="wwwroot\lib\jquery-validation\" />
+    <Folder Include="wwwroot\lib\jquery-validation\dist\" />
+    <Folder Include="wwwroot\lib\jquery\" />
+    <Folder Include="wwwroot\lib\jquery\dist\" />
+  </ItemGroup>
+
+
+	<ItemGroup>
+    <None Remove="DataAccessLayer\" />
+    <None Remove="Microsoft.EntityFrameworkCore" />
+    <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
+    <None Remove="Microsoft.EntityFrameworkCore.Tools" />
+    <None Remove="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
+    <None Remove="Models\" />
+    <None Remove="Models\EmployerModels\" />
+    <None Remove="Models\EmployeeModels\" />
+    <None Remove="Models\Identity\" />
+    <None Remove="Models\BaseEntity\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataAccessLayer\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\images\1.PNG2b2c451f-db4d-4154-884d-35058a2b2ede" />
+    <None Include="wwwroot\images\1.PNG87fdd699-b73c-45e6-99b2-011e919b258e" />
+    <None Include="wwwroot\images\1.PNG8ab230ad-f497-42b8-bcf7-dd013a9056e6" />
+    <None Include="wwwroot\images\1.PNG8d591a54-9048-472c-8932-ac3e8ada9214" />
+    <None Include="wwwroot\images\1.PNGb9003321-cb0c-463c-8a68-46c703b01b60" />
+    <None Include="wwwroot\images\1.PNGe4f7d1fd-f335-486d-bcb5-8c825ffbd3e8" />
+    <None Include="wwwroot\images\2.PNG7cd0c4a9-8d92-4ff6-a065-167fbf142f2c" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.13">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.13" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.11" />
+    <PackageReference Include="Npgsql" Version="6.0.8" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.8" />
+  </ItemGroup>
+
+</Project>

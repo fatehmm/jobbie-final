@@ -1,0 +1,88 @@
+﻿@model Cv
+<html>
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-200">
+    <div class="bg-gray-200 pt-8 px-64">
+        <div class="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
+            <div class="md:grid md:grid-cols-2 md:gap-6">
+                <div class="flex">
+                    <img class="h-12 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Jobbie">
+                    <h2 class="ml-3 text-3xl font-extrabold text-gray-900">Add CV</h2>
+
+                </div>
+                <div class="mt-5 md:mt-0 md:col-span-2">
+                    <form method="post">
+                        <div class="grid grid-cols-6 gap-6">
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="first-name" class="block text-sm font-medium text-gray-700">Full name <span class="text-red-500">*</span></label>
+                                <input asp-for="Fullname" type="text" name="full-name" id="full-name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                            </div>
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="email-address" class="block text-sm font-medium text-gray-700">Email address <span class="text-red-500">*</span></label>
+                                <input type="text" name="email-address" id="email-address" autocomplete="email" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                            </div>
+                            <div class="col-span-6 sm:col-span-2">
+                                <label class="block text-sm font-medium text-gray-700">Title (Job) <span class="text-red-500">*</span></label>
+                                <input type="text" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                            </div>
+                            <div class="col-span-6 sm:col-span-2">
+                                <label for="email-address" class="block text-sm font-medium text-gray-700">Minimum salary <span class="text-red-500">*</span></label>
+                                <input asp-for="MinimumSalary" type="number" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                            </div>
+                            <div class="col-span-6 sm:col-span-2">
+                                <label for="email-address" class="block text-sm font-medium text-gray-700">Maximum salary <span class="text-red-500">*</span></label>
+                                <input asp-for="MaximumSalary" type="number" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                            </div>
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="about" class="block text-sm font-medium text-gray-700">About <span class="text-red-500">*</span></label>
+                                <div class="mt-1">
+                                    <textarea asp-for="About" id="about" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-300 rounded-md"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="about" class="block text-sm font-medium text-gray-700">Education <span class="text-red-500">*</span></label>
+                                <div class="mt-1">
+                                    <textarea asp-for="Education" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-300 rounded-md"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="about" class="block text-sm font-medium text-gray-700">Experience <span class="text-red-500">*</span></label>
+                                <div class="mt-1">
+                                    <textarea asp-for="Experiences" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-300 rounded-md"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="about" class="block text-sm font-medium text-gray-700">Skills <span class="text-red-500">*</span></label>
+                                <div class="mt-1">
+                                    <textarea asp-for="Skills" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-300 rounded-md"></textarea>
+                                </div>
+                            </div>
+                            <div class="place-items-center col-span-6 sm:col-span-3">
+                                <label for="about" class=" block text-sm font-medium text-gray-700">Languages <span class="text-red-500">*</span></label>
+                                <div class="mt-1">
+                                    <textarea rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-300 rounded-md"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="place-items-center col-span-6 sm:col-span-3">
+                                <label for="about" class=" block text-sm font-medium text-gray-700">Contact <span class="text-red-500">*</span></label>
+                                <div class="mt-1">
+                                    <textarea asp-for="Languages" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-300 rounded-md"></textarea>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class=" mt-8 flex justify-end">
+                            <a asp-controller="Employee" asp-action="Vacancies" class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Cancel</a>
+                            <button type="submit" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
